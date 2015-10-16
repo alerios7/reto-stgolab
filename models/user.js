@@ -6,8 +6,8 @@ var User = new Schema ({
         type: String,
         required: "Debes ingresar un email!",
         validate: {
-            validator: function (v) {
-                return /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i.test(v);
+            validator: function (e) {
+                return /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i.test(e);
             },
             message: "Debes ingresar un email válido"
         }
